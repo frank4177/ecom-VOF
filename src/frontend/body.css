@@ -1,0 +1,132 @@
+
+
+.container{
+    display: flex;
+    width: 100%;
+    padding:6.99rem 5% 0;
+    justify-content:space-between;
+    /* background-color: greenyellow; */
+    min-width: 45rem;
+
+}
+
+
+/* ################ CATEGORIES ##############3 */
+
+.categories{
+    width: 15%;
+    min-height: 45rem;
+    border: 2px solid lightgray;
+    margin-right: 1rem;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    border-end-end-radius: 1rem;
+    border-start-start-radius: 1rem;
+    background-color: white;
+    z-index: 3;
+    
+
+}
+
+.container .showcase{
+    height:45rem ;
+    width: 83%;
+    border: 2px solid lightgray;
+    flex: 4;
+    margin-left: 18%;
+}
+
+.categories .catHeader{
+    text-align: center;
+    border: 1px solid orange;
+    background-color:orange;
+    color: white;
+    height: 4rem;
+    border-start-start-radius: 1rem;
+    padding-top: 10px;
+}
+
+.categoryMenus{
+    padding: .6rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.categoryMenus:hover{
+    /* margin-left: 6px; */
+    cursor: pointer;
+
+}
+
+.categoryLinks{
+    color:black;
+    /* margin-left: 10rem; */
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    /* margin: 7px; */
+    background-color:red;
+    z-index: 5;
+    margin-top: 20px;
+    justify-content: space-between;
+    /* position:absolute; */
+    
+    
+}
+
+
+
+.categoryLinks:hover{
+    color:orangered;
+}
+
+
+
+.slick-prev{
+    z-index: 1;
+   
+    
+  }
+  
+/* .slick-prev:before {
+    content: '' !important;
+  } */
+
+.image{
+    flex: 1;
+    height: 45rem;
+}
+
+.image img{
+width: 100%;
+height: 100%;
+object-fit:fill;
+
+}
+
+.rio.active{
+    font-size: 6rem;
+    color: brown;
+}
+
+@media (max-width:768px) {
+
+    .container{
+        padding:0 5%;
+    }
+
+    .categories{
+        display: none;
+        position: none;
+    };
+
+}
+
+@media (max-width:768px){
+.container .showcase{
+    margin-left: 0%;
+}
+}

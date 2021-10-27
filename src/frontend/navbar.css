@@ -1,0 +1,132 @@
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --outline-hover:.2rem solid var(--black) ;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --light-color:#666;
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1)
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    scrollbar-color: orange;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 5%;
+    top:0; left: 0; right: 0;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+
+.navbar .logo{
+    color: orangered;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1.7rem;
+
+}
+
+.navbar .search-form{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50rem;
+height: 3.5rem;
+background-color: #fff;
+border-radius: .5rem;
+box-shadow: var(--box-shadow);
+border: transparent;
+}
+
+.navbar .search-form .searchBox{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    border-right: transparent;
+    border-start-start-radius: 1rem;
+}
+
+.navbar .search-form .searchLogo{
+ font-size:3.5rem ;
+ /* color: white; */
+ border: none;
+ background-color:orange;
+ border-end-end-radius: 1rem;
+ cursor: pointer;
+}
+
+.navbar .search-form .searchLogo:hover{
+    box-shadow:0 .1rem .5rem orangered;
+}
+
+.navbar .rightMenus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar .rightMenus a{
+    font-size: 1.7rem;
+    margin: 0rem 1rem;
+    color:black;
+}
+
+.navbar .rightMenus a:hover{
+    color: orangered;
+}
+
+.navbar .rightMenus .cartColor{
+  font-size: 3rem;
+}
+
+@media(max-width:768px){
+    .navbar .rightMenus .spano{
+        display: none;
+    }
+
+    .navbar{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position:unset;
+        z-index: 0;
+    }
+
+    .navbar .search-form{
+        width: 30rem;
+
+    }
+
+    .navbar .logo{
+        text-align: center;
+    }
+
+    .navbar .rightMenus{
+        margin-top: 1.8rem;
+    }
+
+    
+}
+
+.upr{
+    font-size: 5rem;
+    color: red;
+}
+
