@@ -29,9 +29,10 @@ html{
     z-index: 1000;
 }
 
-.navbar .logo{
+.navbar .logo-container .logo{
     flex: 0;
     margin-right: 1.5rem;
+    color: orangered;
 }
 
 
