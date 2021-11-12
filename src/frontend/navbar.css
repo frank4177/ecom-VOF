@@ -24,109 +24,225 @@ html{
     padding:1rem 5%;
     top:0; left: 0; right: 0;
     box-shadow: var(--box-shadow);
-    z-index: 1000;
     background-color: #fff;
     position: fixed;
     z-index: 1000;
 }
 
-
-
 .navbar .logo{
-    color: orangered;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-right: 1.7rem;
-
+    flex: 0;
+    margin-right: 1.5rem;
 }
 
-.navbar .search-form{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 50rem;
-height: 3.5rem;
-background-color: #fff;
-border-radius: .5rem;
-box-shadow: var(--box-shadow);
-border: transparent;
+
+
+
+/****************SEARCH BAR START**************/
+
+.navbar form{
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    height: 3.5rem;
 }
 
-.navbar .search-form .searchBox{
-    height: 100%;
+.navbar form input{
     width: 100%;
     outline: none;
     border: 1px solid black;
-    border-right: transparent;
-    border-start-start-radius: 1rem;
 }
 
-.navbar .search-form .searchLogo{
- font-size:3.5rem ;
- /* color: white; */
- border: none;
- background-color:orange;
- border-end-end-radius: 1rem;
- cursor: pointer;
-}
-
-.navbar .search-form .searchLogo:hover{
-    box-shadow:0 .1rem .5rem orangered;
-}
-
-.navbar .rightMenus{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.navbar .rightMenus a{
-    font-size: 1.7rem;
-    margin: 0rem 1rem;
-    color:black;
-}
-
-.navbar .rightMenus a:hover{
-    color: orangered;
-}
-
-.navbar .rightMenus .cartColor{
-  font-size: 3rem;
-}
-
-@media(max-width:768px){
-    .navbar .rightMenus .spano{
-        display: none;
-    }
-
-    .navbar{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        position:unset;
-        z-index: 0;
-    }
-
-    .navbar .search-form{
-        width: 30rem;
-
-    }
-
-    .navbar .logo{
-        text-align: center;
-    }
-
-    .navbar .rightMenus{
-        margin-top: 1.8rem;
-    }
-
+.navbar form .search-icon{
+    width: 3.5rem;
+    height: 100%;
+    background-color: orange;
     
 }
 
-.upr{
-    font-size: 5rem;
-    color: red;
+.navbar form .search-icon:hover{
+    /* box-shadow: .1rem .1rem .3rem .1rem orangered; */
+    transform: scale(1.09);
+    cursor: pointer;
 }
 
+/****************SEARCH BAR END**************/
+
+
+
+
+/****************NAV LINKS START**************/
+
+.menu 
+{
+    position: relative;
+}
+
+.menu > li, .menu > a{
+    display: inline-block;
+}
+
+.menu a{
+    color: black;
+    display: block;
+    margin: 5px 1.5rem;
+}
+
+
+.menu a:hover{
+    color:orangered;
+}
+
+.subMenu{
+    position: absolute;
+    background-color: white;
+    width: 19rem;
+    left: 0;
+    display: none;
+}
+
+.porel {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .porel{
+    display: flex;
+    flex-direction: column;
+} */
+
+.subMenu2{
+    position: absolute;
+    left: 100%;
+    width: 140px;
+    top: 0;
+    background-color: white;
+    display: none;
+}
+
+.subMenu22{
+    position: absolute;
+    left: 100%;
+    width: 140px;
+    top: 50px;
+    background-color: white;
+    display: none;
+    border: 1px solid black;
+}
+
+.menu li:hover > .subMenu{
+    display: block;
+}
+
+.menu li:hover > .subMenu2{
+    display: block;
+}
+
+.menu li:hover > .subMenu22{
+    display: block;
+}
+
+/****************NAV LINKS END**************/
+
+
+
+
+/***************MOBILE VIEW HAMBURGER MENU START******************/
+
+.menu-bars .icon{
+    background: none;
+    font-size: 2rem;
+}
+
+ .navbar .menu-bars .icon{
+    background: none;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.nav-menu{
+    background-color:white;
+    max-height: calc(100vh - 9rem);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    left: -100%;
+    transition: 850ms;
+    overflow-y: scroll;
+}
+
+.nav-menu.active{
+    left: 0;
+    transition: 350ms;
+
+}
+
+/***************MOBILE VIEW HAMBURGER MENU END******************/
+
+
+
+
+
+/****************MOBILE VIEW START**************/
+
+.mob-menu 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* align-items: center; */
+    width: 250px;
+}
+
+
+.mob-menu a{
+    color: black;
+    margin: 5px 1.5rem;
+}
+
+
+.mob-menu a:hover{
+    color:orangered;
+}
+
+.mob-subMenu{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+.porell{
+    display: grid;
+}
+
+.mob-subMenu2{
+    background-color: white;
+    display: block;
+}
+
+.mob-subMenu22{
+    background-color: white;
+    display: block;
+}
+
+.mob-menu li:hover > .mob-subMenu{
+    display: block;
+}
+
+.mob-menu li:hover > .mob-subMenu2{
+    display: block;
+}
+
+.mob-menu li:hover > .mob-subMenu22{
+    display: block;
+}
+
+.cat {
+    border-top: 2px solid rgba(255, 166, 0, 0.432);
+}
+
+/****************MOBILE VIEW END**************/

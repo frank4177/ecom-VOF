@@ -1,170 +1,51 @@
 
 import React from 'react'
+import womanClothe1 from './imagesWoman/womanClothe1.jpg'
 
 export const CategoryMenus = [
-  {
- 
-  title:'clothing',
-  path:'/shoes',
 
-  subNav: [
-           {
-           title:'Men',
-            path:'#'
-           },
-           {
-           title:'Women',
-           path:'#'
-           },
-           {
-            title:'cray',
-            path:'#'
-            },
-     ]
+
+
+
+
+  {
+  title:'clothing',
+  path:'/shoes'
   },
 
   {
   title:'shoes',
-  path:'/shoes',
-
-  subNav: [
-    {
-      title:'Men',
-       path:'#'
-      },
-      {
-      title:'Women',
-      path:'#'
-      }
-    ]
+  path:'/shoes'
   },
 
   {
     title:'Bags & Wallets',
-    path:'/shoes',
-  
-    subNav: [
-      {
-        title:'Men',
-         path:'#'
-        },
-        {
-        title:'Women',
-        path:'#'
-        }
-      ]
+    path:'/shoes'
     },
 
     {
     title:'Watches',
-    path:'/shoes',
-  
-    subNav: [
-      {
-        title:'Men',
-         path:'#'
-        },
-        {
-        title:'Women',
-        path:'#'
-        }
-      ]
+    path:'/shoes'
     },
 
     {
       title:'Jewelry',
-      path:'/shoes',
-    
-      subNav: [
-        {
-          title:'Men',
-           path:'#'
-          },
-          {
-          title:'Women',
-          path:'#'
-          }
-        ]
+      path:'/shoes'
       },
   
-      {
-        title:'Accessories',
-        path:'/shoes',
-      
-        subNav: [
-          {
-            title:'Men',
-             path:'#'
-            },
-            {
-            title:'Women',
-            path:'#'
-            }
-          ]
+     {
+        title:'Sunglasses',
+        path:'/shoes'
         },
 
-        {
-          title:'Sun glasses',
-          path:'/shoes',
-        
-          subNav: [
             {
-              title:'Men',
-               path:'#'
-              },
-              {
-              title:'Women',
-              path:'#'
-              }
-            ]
-          },
-
-          {
-            title:'Weddings',
-            path:'/shoes',
-          
-            subNav: [
-              {
-                title:'Men',
-                 path:'#'
-                },
-                {
-                title:'Women',
-                path:'#'
-                }
-              ]
-            },
-
-            {
-              title:'Sportswear',
-              path:'/shoes',
-            
-              subNav: [
-                {
-                  title:'Men',
-                   path:'#'
-                  },
-                  {
-                  title:'Women',
-                  path:'#'
-                  }
-                ]
+              title:'Luggage',
+              path:'/shoes'
               },
 
               {
-                title:'Kids Fashion',
+                title:'Textile',
                 path:'/shoes',
-              
-                subNav: [
-                  {
-                    title:'Men',
-                     path:'#'
-                    },
-                    {
-                    title:'Women',
-                    path:'#'
-                    }
-                  ]
                 },
 
 

@@ -9,8 +9,8 @@ import showcaseImageFive from '../frontend/showcaseImageFive.jpg'
 import showcaseImageSix from '../frontend/showcaseImageSix.jpg'
 import { BluetoothSearchingOutlined, ViewListOutlined } from "@material-ui/icons";
 import { useState } from "react";
-import  {CategoryMenus}  from "./categoryMenus";
-import CategorySubMenus from './categorySubMenus'
+// import  {CategoryMenus}  from "./categoryMenus";
+// import CategorySubMenus from './categorySubMenus'
 
 
 
@@ -21,7 +21,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", marginRight: 30 }}
+      style={{ ...style, display: "flex", marginRight: 30, background:"grey", width:40, height:40, justifyContent:"center", alignItems:"center"}}
       onClick={onClick}
     />
   );
@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", marginLeft:30, background:"blue"}}
+      style={{ ...style, display: "flex", marginLeft: 30, background:"grey", width:40, height:40, justifyContent:"center", alignItems:"center"}}
       onClick={onClick}
     />
 
@@ -63,7 +63,7 @@ function SimpleSlider()  {
 
     return (
   <div className="container">
-      <div className="categories">
+      {/* <div className="categories">
           <div className="catHeader">
             <h2 style={{ display:"flex", alignItems:"center",  color:"black", justifyContent:"center"}}> CATEGORIES</h2>
           </div>
@@ -75,7 +75,7 @@ function SimpleSlider()  {
               
             })}
      
-      </div>
+      </div> */}
 
       <div className="showcase">
         <Slider {...settings}>
@@ -93,7 +93,6 @@ function SimpleSlider()  {
              </div>
 
           <div>
-
           <div className="image">
               <img src={showcaseImageThree} alt="" />
 

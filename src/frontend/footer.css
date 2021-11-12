@@ -1,0 +1,81 @@
+.footer-container{
+    background-color: white;
+    margin-top: 4rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 20rem;
+    padding-top: 12px;
+}
+
+
+
+.footer-container .vof{
+    flex: 2;
+}
+
+.footer-container .vof h1{
+    margin-bottom: 20px;
+}
+
+.footer-container .vof .icons-container{
+    display: flex;
+}
+
+.footer-container .vof .icons-container .icons{
+   font-size: 25px;
+   margin: 0 10PX 0PX 0px;
+}
+
+.footer-container .my-acct{
+    flex:1;
+}
+
+
+.footer-container .info{
+    flex: 1;
+}
+
+.footer-container .contact{
+    flex: 1;
+}
+
+ul{
+    font-size: 13px;
+    list-style: none;
+}
+
+.arrowForward{
+    color: orangered;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-right: 0.8rem;
+}
+
+span:hover{
+    margin-left: 5px;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+p{
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+}
+
+.desc{
+    margin-bottom: 20px;
+    font-weight:bold;
+    font-size: 17px;
+}
+
+li{
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}

@@ -1,17 +1,13 @@
-import Navbar from './frontend/navbar.jsx'
+import Home from './frontend/pages/home'
+import ProductList from './frontend/pages/productList'
 import './App.css'
-import SimpleSlider from './frontend/slider'
-import Hotdeals from './frontend/hotdealsSlider.jsx';
 
 function App() {
 
  
   return (
     <div className="App">
-     <Navbar/>
-     <SimpleSlider/>
-     <Hotdeals/>
-    
+     <Home/>
     </div>
   );
 }
