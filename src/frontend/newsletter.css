@@ -23,7 +23,7 @@ margin-bottom: 20px;
 }
 
 .newsLetter-container .searchForm{
-    width: 50rem;
+    width: 80%;
     height: 3.5rem;
     background-color: orange;
     display: flex;
