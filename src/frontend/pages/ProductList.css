@@ -1,4 +1,38 @@
-.featured-container{
+/* .dresses{
+    margin-top: 60px;
+   margin-left: 5%;
+   
+} */
+
+.filterContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 70px;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.filterText{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.filter select{
+    margin-right: 20px;
+    padding: 8px;
+}
+
+
+
+.ProductFeatured-container{
     margin-top: 30px;
     margin-left: 5%;
     margin-right:5%;
@@ -7,13 +41,13 @@
     box-shadow: .1rem .1rem .4rem .1rem gray;
 }
 
-.featured-container h1{
+.ProductFeatured-container h1{
     text-align: center;
     margin-bottom: 8px;
     font-size: 2.5rem;
 }
 
-.featured-container .image-container{
+.ProductFeatured-container .ProductImage-container{
     display: flex;
     justify-content: center;
     align-content: center;
@@ -22,14 +56,14 @@
 }
 
 
-.feature-images h2{
+.ProductFeature-images h2{
     text-align: start;
     color:black;
     font-family:sans-serif;
     font-weight: 300;
 }
 
-.feature-images{
+.ProductFeature-images{
     border-radius: 5px;
     border: 2px solid lightgray;
     width: 25rem;
@@ -40,7 +74,7 @@
     
 }
 
-.featureCat-icons{
+.ProductFeatureCat-icons{
     position: absolute;
     top:-170%;
     left: 0;
@@ -53,14 +87,14 @@
 }
 
 
-.featureCat-icons:hover{
+.ProductFeatureCat-icons:hover{
     background-color: rgba(0, 0, 0, 0.479);
     top: 0;
     transition: all 0.8s ease;
     
 }
 
-.featureCat-icons .featureIcons{
+.ProductFeatureCat-icons .ProductFeatureIcons{
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -74,7 +108,7 @@
     
 }
 
-.featureCat-icons .featureIcons:hover{
+.ProductFeatureCat-icons .ProductFeatureIcons:hover{
     transform: scale(1.1); 
     background-color: orange;
     transition: .2s;
@@ -84,6 +118,21 @@
 /***************** MEDIA QUERIES ***************/
 
 @media only screen and (max-width: 480px) {
+    .ProductFeature-images{
+        width: 80%;
+    }
+
+    .ProductFeatured-container .ProductImage-container{
+        flex-wrap:wrap;
+    }
+
+    .filter{
+        
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
     .feature-images{
         width: 80%;
     }
@@ -91,18 +140,22 @@
     .featured-container .image-container{
         flex-wrap:wrap;
     }
+
+   .filterText{
+       display: none;
+   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 1161px) {
-   .featured-container .image-container{
+   .ProductFeatured-container .ProductImage-container{
        flex-wrap: nowrap;
    }
 
-   .feature-images{
+   .ProductFeature-images{
        margin: 10px;
    }
 
-   .feature-images img{
+   .ProductFeature-images img{
        width: 100%;
    }
 }

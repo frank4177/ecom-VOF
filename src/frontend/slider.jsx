@@ -3,14 +3,10 @@ import Slider from "react-slick";
 import './body.css'
 import showcaseImageOne from '../frontend/showcasImageOne.jpg'
 import showcaseImageTwo from '../frontend/showcaseImageTwo.jpg'
-import showcaseImageThree from '../frontend/showcaseImageThree.jpg'
-import showcaseImageFour from '../frontend/showcaseImageFour.jpg'
 import showcaseImageFive from '../frontend/showcaseImageFive.jpg'
-import showcaseImageSix from '../frontend/showcaseImageSix.jpg'
 import { BluetoothSearchingOutlined, ViewListOutlined } from "@material-ui/icons";
 import { useState } from "react";
-// import  {CategoryMenus}  from "./categoryMenus";
-// import CategorySubMenus from './categorySubMenus'
+
 
 
 
@@ -21,7 +17,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "flex", marginRight: 30, background:"grey", width:40, height:40, justifyContent:"center", alignItems:"center"}}
+      style={{ ...style, display: "flex", marginRight: 30, background:"grey", width:40, height:40, justifyContent:"center", alignItems:"center", display:"none"}}
       onClick={onClick}
     />
   );
@@ -32,7 +28,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "flex", marginLeft: 30, background:"grey", width:40, height:40, justifyContent:"center", alignItems:"center"}}
+      style={{ ...style, display: "flex", marginLeft: 30, background:"grey", width:40, height:40, justifyContent:"center", alignItems:"center", display:"none"}}
       onClick={onClick}
     />
 
@@ -63,19 +59,6 @@ function SimpleSlider()  {
 
     return (
   <div className="container">
-      {/* <div className="categories">
-          <div className="catHeader">
-            <h2 style={{ display:"flex", alignItems:"center",  color:"black", justifyContent:"center"}}> CATEGORIES</h2>
-          </div>
-            {CategoryMenus.map((item, index) =>{
-              return (
-                <CategorySubMenus item={item} key={index}/>
-              )
-
-              
-            })}
-     
-      </div> */}
 
       <div className="showcase">
         <Slider {...settings}>
@@ -92,19 +75,6 @@ function SimpleSlider()  {
 
              </div>
 
-          <div>
-          <div className="image">
-              <img src={showcaseImageThree} alt="" />
-
-             </div>
-          </div>
-          
-          <div>
-          <div className="image">
-              <img src={showcaseImageFour} alt="" />
-
-             </div>
-          </div>
 
           <div>
           <div className="image">
@@ -112,14 +82,16 @@ function SimpleSlider()  {
 
              </div>
           </div>
-
-          <div>
-          <div className="image">
-              <img src={showcaseImageSix} alt="" />
-
-             </div>
-          </div>
         </Slider>
+      </div>
+
+      
+      <div className="mobileShowCase">
+        <div className="mobileShowCase-container">
+          <h1><span style={{color:"orangered"}}>40%</span> SALE OFF</h1>
+          <h1>END OF YEAR DEALS</h1>
+          <button>SHOP NOW</button>
+        </div>
       </div>
   </div>
     );

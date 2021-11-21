@@ -9,53 +9,97 @@ import sunglasses from  './imagesCategories/sunglasses.jpg'
 import textile from './imagesCategories/textile.jpg'
 import luggage from './imagesCategories/luggage.jpg'
 import './FeaturedCategories.css'
+import womanShoe2 from './imagesWoman/womanShoe2.jpg'
+import { FavoriteBorder, SearchOutlined, ShoppingCartOutlined, StarRate, StarBorderRounded, StarRounded } from "@material-ui/icons";
 
 const FeaturedCategories = () => {
     return ( 
         <div className="featured-container">
-            <h1>Featured <span style={{color:"orangered"}}>Categories</span></h1>
+            <h1>Featured <span style={{color:"orangered"}}>Products</span></h1>
             <div className="image-container">
 
-            <a href="" className="imagess">
-            <img src={CategoriesShoes} alt="" />
-            <h2>Shoes</h2>
-            </a>
+          
+          <div className="feature-images">
+            <img src={womanShoe2} alt=""/>
+            <div className="featureCat-icons">
+            <a href="google.com" style={{textDecoration:"none", color:"black"}}><ShoppingCartOutlined className="featureIcons"/></a>
+            <SearchOutlined className="featureIcons"/>
+            <FavoriteBorder className="featureIcons"/>
+            </div>
+            <h2>Aomei Women Bodycon...</h2>
+            <div>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarBorderRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            </div>
+            <h2>₦ 2,000</h2>
+          </div>
+          
 
-            <a href="" className="imagess">
-            <img src={bagsAndWallets} alt=""/>
-            <h2>Bags and Wallets</h2>
-            </a>
+          
+          
+          <div className="feature-images">
+            <img src={womanShoe2} alt=""/>
+            <div className="featureCat-icons">
+            <a href="google.com" style={{textDecoration:"none", color:"black"}}><ShoppingCartOutlined className="featureIcons"/></a>
+            <SearchOutlined className="featureIcons"/>
+            <FavoriteBorder className="featureIcons"/>
+            </div>
+            <h2>Aomei Women Bodycon...</h2>
+            <div>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarBorderRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            </div>
+            <h2>₦ 2,000</h2>
+          </div>
+          
 
-            <a href="" className="imagess">
-            <img src={watches} alt=""/>
-            <h2>Watches</h2>
-            </a>
+          
+          
+          <div className="feature-images">
+            <img src={womanShoe2} alt=""/>
+            <div className="featureCat-icons">
+            <a href="google.com" style={{textDecoration:"none", color:"black"}}><ShoppingCartOutlined className="featureIcons"/></a>
+            <SearchOutlined className="featureIcons"/>
+            <FavoriteBorder className="featureIcons"/>
+            </div>
+            <h2>Aomei Women Bodycon...</h2>
+            <div>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarBorderRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            </div>
+            <h2>₦ 2,000</h2>
+          </div>
+          
 
-            <a href="" className="imagess">
-            <img src={sunglasses} alt=""/>
-            <h2>Sunglasses</h2>
-            </a>
-
-            <a href="" className="imagess">
-            <img src={Jewelry} alt=""/>
-            <h2>Jewelry</h2>
-            </a>
-
-            <a href="" className="imagess">
-            <img src={textile} alt=""/>
-            <h2>Textile</h2>
-            </a>
-
-            <a href="" className="imagess">
-            <img src={Jewelry} alt=""/>
-            <h2>Jewelry</h2>
-            </a>
-
-            <a href="" className="imagess">
-            <img src={luggage} alt=""/>
-            <h2>Luggage</h2>
-            </a>
-            
+          
+          
+          <div className="feature-images">
+            <img src={womanShoe2} alt=""/>
+            <div className="featureCat-icons">
+            <a href="google.com" style={{textDecoration:"none", color:"black"}}><ShoppingCartOutlined className="featureIcons"/></a>
+            <SearchOutlined className="featureIcons"/>
+            <FavoriteBorder className="featureIcons"/>
+            </div>
+            <h2>Aomei Women Bodycon...</h2>
+            <div>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            <StarBorderRounded style={{ color:"gold", fontSize:"2.2rem"}}/>
+            </div>
+            <h2>₦ 2,000</h2>
+          </div>
+          
             </div>
         </div>
      );

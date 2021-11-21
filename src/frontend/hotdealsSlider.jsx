@@ -9,16 +9,41 @@ import womanClothe1 from './imagesWoman/womanClothe1.jpg'
 import womanShoe2 from './imagesWoman/womanShoe2.jpg'
 
 
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "flex", marginRight: 30, background:"rgba(255, 166, 0, 0.644)", width:40, height:40, justifyContent:"center", alignItems:"center"}}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "flex", marginLeft: 30, background:"rgba(255, 166, 0, 0.644)", width:40, height:40, justifyContent:"center", alignItems:"center"}}
+      onClick={onClick}
+    />
+
+  );
+}
 const Hotdeals = () =>{
 
     var settings = {
       dots: false,
       infinite: true,
-      speed: 2000,
+      speed: 700,
       slidesToShow: 4,
       slidesToScroll: 4,
       autoplay: true,
-      autoplaySpeed: 10000,
+      autoplaySpeed: 11000,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
     
       pauseOnHover: true,
       responsive: [
@@ -220,6 +245,7 @@ const Hotdeals = () =>{
 
           
         </Slider>
+
       </div>
     );
   }

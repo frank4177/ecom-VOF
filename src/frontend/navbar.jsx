@@ -1,12 +1,13 @@
-import { ArrowRight, Search, ShoppingCartOutlined, ArrowDropDown, Menu, Close, PermIdentityOutlined, Login, LockOpen} from "@material-ui/icons";
+import { ArrowRight, Search, ShoppingCartOutlined, ArrowDropDown, Menu, Close, PermIdentityOutlined, Login, LockOpen, } from "@material-ui/icons";
 import React from "react";
 import './navbar.css'
 import Badge from '@material-ui/core/Badge';
 import { makeStyles } from "@material-ui/core/styles";
 // import Categories from './category'
 import {CategoryMenus} from './categoryMenus'
-import { useState } from "react";
+import { useState, useRef } from "react";
 import CategoryItems from './categorieItems'
+import {gsap} from 'gsap'
 
 
 
@@ -33,9 +34,9 @@ return (
     <>
 <div className="navbar">
 
-    {/* <div>
-        <div className="menu-bars"><Menu className="icon" onClick={showCatNav}/></div>
-    </div> */}
+        <div className="menu-bars">
+            <Menu className="icon" onClick={showCatNav}/>
+        </div>
       
     <div className="logo-container">
         <h1 className="logo">VOF</h1>
@@ -48,50 +49,53 @@ return (
         <a href=""><Search className="search-icon"/></a>
     </form>
 
-    {/* <ul className="menu">
-        <li><a href="">categories <ArrowDropDown/></a>
-          <ul className="subMenu">
-             <li className="porel"><a href="">Men Fashion <ArrowRight/></a>
-               <ul className="subMenu2">
-                   <li><a href="">clothing</a></li>
-                   <li><a href="">shoes</a></li>
-                   <li><a href="">watches</a></li>
-                   <li><a href="">sunglasses</a></li>
-                   <li><a href="">jewelry</a></li>
-               </ul>
-             </li>
-             <li><a href="">Women Fashion <ArrowRight/></a>
-             <ul className="subMenu22">
-                   <li><a href="">clothing</a></li>
-                   <li><a href="">shoes</a></li>
-                   <li><a href="">watches</a></li>
-                   <li><a href="">sunglasses</a></li>
-                   <li><a href="">jewelry</a></li>
-               </ul>
-             </li>
-             <li><a href="">kids Fashion</a></li>
-          </ul>
-        </li>
-        <li><a href="">sign up</a></li>
-        <li><a href="">login</a></li>
-    </ul> */}
+    <div className="menu">
+        <div className="li"><a href="">categories <ArrowDropDown/></a>
+          <div className="subMenu">
+             <div className="li"><a href="">Men Fashion <ArrowRight/></a>
+               <div className="subMenu2">
+                   <div className="li"><a href="">clothing</a></div>
+                   <div className="li"><a href="">shoes</a></div>
+                   <div className="li"><a href="">watches</a></div>
+                   <div className="li"><a href="">sunglasses</a></div>
+                   <div className="li"><a href="">jewelry</a></div>
+               </div>
+             </div>
+             <div className="li"><a href="">Women Fashion <ArrowRight/></a>
+             <div className="subMenu22">
+                   <div className="li"><a href="">clothing</a></div>
+                   <div className="li"><a href="">shoes</a></div>
+                   <div className="li"><a href="">watches</a></div>
+                   <div className="li"><a href="">sunglasses</a></div>
+                   <div className="li"><a href="">jewelry</a></div>
+               </div>
+             </div>
+             <div className="li"><a href="">kids Fashion</a></div>
+          </div>
+        </div>
+        <div className="li"><a href="./pages/SignUp.jsx">sign up</a></div>
+        <div className="li"><a href="">login</a></div>
+    </div>
 
+<div className="huo">
 <a href="/" className="cart-wrap">
-   <Badge badgeContent={4}  classes={{badge: classes.badge}}>
+   <Badge badgeContent={4}  classes={{badge: classes.badge}} className="badge">
     <ShoppingCartOutlined color="action" className="cartColor"/>
-    </Badge>          
+    </Badge>
+    <h6 style={{marginLeft:"10px"}}>cart</h6>       
 </a>
+</div>
         
 </div>
 
 
 
-///////////////// MOBILE SIDEBAR VIEW *//////////////////
+{/* <>MOBILE VIEW</> */}
 
 <div className={CatNav ? 'nav-menu active' : 'nav-menu'}>
     <ul className="nav-menu-items">
         <li className="navbar-toggle">
-            <div className="menu-bars">
+            <div className="menu-barss">
                 <Close className="icon" onClick={showCatNav}/>
             </div>
         </li>
@@ -101,31 +105,14 @@ return (
 
         <ul className="mob-menu">
 
-        <li><a href=""><LockOpen/>login</a></li>
-        <li><a href=""><PermIdentityOutlined/>sign up</a></li>
+        <li><a href="" className="nav-text"><LockOpen/>login</a></li>
+        <li><a href="" className="nav-text"><PermIdentityOutlined/>sign up</a></li>
         
-        <li className="cat" ><a href="">categories</a></li>
-          <ul className="mob-subMenu">
-             <li className="porell" onClick={showCatNav}><a href="">Men Fashion <ArrowDropDown/></a>
-               <ul className="mob-subMenu2">
-                   <li><a href="">clothing</a></li>
-                   <li><a href="">shoes</a></li>
-                   <li><a href="">watches</a></li>
-                   <li><a href="">sunglasses</a></li>
-                   <li><a href="">jewelry</a></li>
-               </ul>
-             </li>
-             <li className="porell"><a href="">Women Fashion <ArrowDropDown/></a>
-             <ul className="mob-subMenu22">
-                   <li><a href="">clothing</a></li>
-                   <li><a href="">shoes</a></li>
-                   <li><a href="">watches</a></li>
-                   <li><a href="">sunglasses</a></li>
-                   <li><a href="">jewelry</a></li>
-               </ul>
-             </li>
-             <li className="porell" ><a href="">kids Fashion <ArrowDropDown/></a></li>
-          </ul>
+        <li className="cat"><a href="">categories</a></li>
+
+            {CategoryMenus.map((item, index) =>{
+              return <CategoryItems item={item} key={index}/>
+            })}
     </ul>
     </ul>
 </div>
