@@ -82,7 +82,7 @@ return (
    <Badge badgeContent={4}  classes={{badge: classes.badge}} className="badge">
     <ShoppingCartOutlined color="action" className="cartColor"/>
     </Badge>
-    <h6 style={{marginLeft:"10px"}}>cart</h6>       
+    <div className="cart-text">cart</div>       
 </a>
 </div>
         

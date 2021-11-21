@@ -38,7 +38,6 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
     margin-left: 5px;
 }
 
@@ -46,9 +45,13 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
     color: black;
     
+}
+
+.navbar .huo .cart-wrap .cart-text{
+font-size: 15px;
+margin-left: 10px;
 }
 
 
@@ -68,6 +71,12 @@ html{
 }
 
 /************ MEDIA QUERY ***********/
+
+@media (max-width: 480px) {
+    .navbar .huo .cart-wrap .cart-text{
+        display: none;
+    }
+}
 
 
 
