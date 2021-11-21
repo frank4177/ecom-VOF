@@ -25,7 +25,6 @@ margin-bottom: 20px;
 .newsLetter-container .searchForm{
     width: 50%;
     height: 3.5rem;
-    background-color: orange;
     display: flex;
     
 }
@@ -38,6 +37,7 @@ margin-bottom: 20px;
 
 .newsLetter-container .searchLogo{
     font-size: 3.5rem;
+    background-color: orange;
 }
 
 .newsLetter-container .searchLogo:hover{
