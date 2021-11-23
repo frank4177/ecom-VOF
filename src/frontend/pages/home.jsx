@@ -9,7 +9,7 @@ import FeaturedCategories from '../featuredCategories'
 const Home = () => {
     return (
       <div className="App">
-       <Navbar/>
+       {/* <Navbar/> */}
        <SimpleSlider/>
        <Hotdeals/>
        <FeaturedCategories/>

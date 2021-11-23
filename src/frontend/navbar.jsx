@@ -8,6 +8,8 @@ import {CategoryMenus} from './categoryMenus'
 import { useState, useRef } from "react";
 import CategoryItems from './categorieItems'
 import {gsap} from 'gsap'
+import { Link} from 'react-router-dom'
+
 
 
 
@@ -38,10 +40,10 @@ return (
             <Menu className="icon" onClick={showCatNav}/>
         </div>
       
-    <div className="logo-container">
+    <Link to="Home"  className="logo-container">
         <h1 className="logo">VOF</h1>
 
-    </div>
+    </Link>
 
 
     <form action="">
@@ -54,7 +56,7 @@ return (
           <div className="subMenu">
              <div className="li"><a href="">Men Fashion <ArrowRight/></a>
                <div className="subMenu2">
-                   <div className="li"><a href="">clothing</a></div>
+                   <div className="li"><Link to="ProductList" href="">clothing</Link></div>
                    <div className="li"><a href="">shoes</a></div>
                    <div className="li"><a href="">watches</a></div>
                    <div className="li"><a href="">sunglasses</a></div>
@@ -73,20 +75,22 @@ return (
              <div className="li"><a href="">kids Fashion</a></div>
           </div>
         </div>
-        <div className="li"><a href="./pages/SignUp.jsx">sign up</a></div>
-        <div className="li"><a href="">login</a></div>
+        <Link to="SignUp" className="li"><a href="">sign up</a></Link>
+        <Link to="Login" className="li"><a href="">login</a></Link>
     </div>
 
 <div className="huo">
-<a href="/" className="cart-wrap">
+<Link to="Cart" className="cart-wrap">
    <Badge badgeContent={4}  classes={{badge: classes.badge}} className="badge">
     <ShoppingCartOutlined color="action" className="cartColor"/>
     </Badge>
     <div className="cart-text">cart</div>       
-</a>
+</Link>
 </div>
         
 </div>
+
+
 
 
 
@@ -100,13 +104,10 @@ return (
             </div>
         </li>
 
-        
-        
-
         <ul className="mob-menu">
 
-        <li><a href="" className="nav-text"><LockOpen/>login</a></li>
-        <li><a href="" className="nav-text"><PermIdentityOutlined/>sign up</a></li>
+        <li><Link to="Login" className="nav-text"><LockOpen style={{marginRight:"10px", fontSize:"2rem"}}/>login</Link></li>
+        <li><Link to="SignUp" className="nav-text"><PermIdentityOutlined style={{marginRight:"10px", fontSize:"2rem"}}/>sign up</Link></li>
         
         <li className="cat"><a href="">categories</a></li>
 

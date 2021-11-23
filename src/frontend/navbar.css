@@ -32,6 +32,7 @@ html{
 .navbar .logo-container .logo{
     margin-right: 1.5rem;
     color: orangered;
+    cursor: pointer;
 }
 
 .navbar .huo{
@@ -175,7 +176,7 @@ margin-left: 10px;
     top: 50px;
     background-color: white;
     display: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 
@@ -227,8 +228,8 @@ margin-left: 10px;
 }
 
 .nav-menu{
-    background-color:rgba(255, 255, 255, 0.911);
-    height: calc(80vh - 9rem);
+    background-color:rgb(255, 255, 255);
+    height: calc(60vh - 9rem);
     display: flex;
     justify-content: center;
     position: fixed;
@@ -279,6 +280,10 @@ font-size: 1.5rem;
 .mob-menu a{
     color: black;
     margin: 5px 1.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -334,14 +339,16 @@ font-size: 1.5rem;
 }
 
 .jj{
-    margin: 5px 1.5rem;
+    margin: 10px 1.5rem;
     font-size: 1.5rem;
     cursor: pointer;
+    font-size: 2rem;
 }
 
 .kki{
     margin: 10px 1.5rem;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
+    margin-left: 30px;
 }
 
 /*###################**MOBILE VIEW END##################################*/

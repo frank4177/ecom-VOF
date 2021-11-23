@@ -31,13 +31,17 @@
 
 .feature-images{
     border-radius: 5px;
-    border: 2px solid lightgray;
+    box-shadow: .05rem .06rem .4rem .05rem gray;
     width: 25rem;
+    /* height: 35rem; */
     position: relative; 
     overflow:hidden ;
-    /* background-color: orange; */
     margin:1rem auto;
     
+}
+
+.feature-images img{
+    width: 100%;
 }
 
 .featureCat-icons{

@@ -26,7 +26,8 @@
 
 .hot-container .Hot-images{
 border-radius: 5px;
-border: 2px solid lightgray;
+/* border: 2px solid lightgray; */
+box-shadow: .02rem .02rem .4rem .05rem gray;
 width: 80%;
 position: relative; 
 overflow:hidden ;

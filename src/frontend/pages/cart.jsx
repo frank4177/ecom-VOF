@@ -18,7 +18,7 @@ const Cart = () => {
 
     return ( 
         <>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className="cart-container">
             <div className="cart-wrapper">
                 <h1>YOUR BAG</h1>

@@ -20,7 +20,7 @@ const FeaturedCategories = () => {
 
           
           <div className="feature-images">
-            <img src={womanShoe2} alt=""/>
+            <img src={womanClothe1} alt=""/>
             <div className="featureCat-icons">
             <a href="google.com" style={{textDecoration:"none", color:"black"}}><ShoppingCartOutlined className="featureIcons"/></a>
             <SearchOutlined className="featureIcons"/>
