@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import Navbar from "./navbar";
-import {CategoryMenus} from './categoryMenus'
+import {CategoryMenus} from './Data'
 import './navbar.css'
 import {ArrowDropDown} from "@material-ui/icons";
+import {Link} from 'react-router-dom'
 
 const CategoryItems = ({item}) => {
 
@@ -12,13 +13,15 @@ const CategoryItems = ({item}) => {
     const showCatNav = () => setCatNav(!CatNav)
 
     return ( 
-        <div onClick={()=>showCatNav()}>
+        <div onClick={()=>showCatNav()} className="juza">
             <div className="jj">{item.Name} <ArrowDropDown/></div>
             {CatNav && item.Menus.map((item, index)=>{
                 return (
-                    <div item={item} key={index} className="kki">
-                        {item.title}
-                    </div>
+
+                        <Link to={item.path} item={item} key={index} className="kki"  onClick={showCatNav}>
+                            {item.title}
+                        </Link>
+                    
                 );
 
             })}

@@ -4,9 +4,9 @@ import './navbar.css'
 import Badge from '@material-ui/core/Badge';
 import { makeStyles } from "@material-ui/core/styles";
 // import Categories from './category'
-import {CategoryMenus} from './categoryMenus'
+import {CategoryMenus} from './Data'
 import { useState, useRef } from "react";
-import CategoryItems from './categorieItems'
+import CategoryItems from './categoryProp'
 import {gsap} from 'gsap'
 import { Link} from 'react-router-dom'
 
@@ -97,10 +97,10 @@ return (
 {/* <>MOBILE VIEW</> */}
 
 <div className={CatNav ? 'nav-menu active' : 'nav-menu'}>
-    <ul className="nav-menu-items">
+    <ul className="nav-menu-items" onClick={showCatNav}>
         <li className="navbar-toggle">
             <div className="menu-barss">
-                <Close className="icon" onClick={showCatNav}/>
+                <Close className="icon" />
             </div>
         </li>
 

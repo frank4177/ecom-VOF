@@ -4,7 +4,7 @@ import SimpleSlider from '../slider'
 import Hotdeals from '../hotdealsSlider'
 import Newsletter from '../newsletter'
 import Footer from '../footer'
-import FeaturedCategories from '../featuredCategories'
+import FeaturedCategories from '../products'
 
 const Home = () => {
     return (

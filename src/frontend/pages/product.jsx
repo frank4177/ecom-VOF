@@ -6,7 +6,7 @@ import Footer from "../footer";
 import womanShoe2 from '../imagesWoman/womanShoe2.jpg'
 import { Add, Remove } from "@material-ui/icons";
 
-const Products = () => {
+const Product = () => {
     return ( 
       <div className="Productcontainer">
           <Navbar/>
@@ -54,4 +54,4 @@ const Products = () => {
      );
 }
  
-export default Products;
+export default Product;

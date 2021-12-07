@@ -1,44 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../navbar";
 import './ProductList.css'
 import Newsletter from "../newsletter";
 import Footer from "../footer";
 import womanShoe2 from '../imagesWoman/womanShoe2.jpg'
 import { FavoriteBorder, SearchOutlined, ShoppingCartOutlined, StarRate, StarBorderRounded, StarRounded } from "@material-ui/icons";
+import { useLocation} from "react-router";
+import FeaturedCategories from "../products";
 
 const ProductList = () => {
-    return ( 
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const [filters, setFilters] = useState({})
+  const [sort, setSort] = useState("newest")
+
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilters({
+      ...filters,
+      [e.target.name]: value,
+    })
+  }
+
+    return (
         <div>
             <Navbar/>
             {/* <h1 className="dresses">Dresses</h1> */}
             <div className="filterContainer">
-              <div className="filter">
+              {/* <div className="filter">
                   <div className="filterText">Filter Products:</div>
-                   <select name="Color" id="">
-                    <option value="" disabled selected>Color</option>
-                    <option value="">White</option>
-                    <option value="">Black</option>
-                    <option value="">Blue</option>
-                    <option value="">Yellow</option>
-                    <option value="">green</option>
+                   <select name="Color" id="" onChange={handleFilters}>
+                    <option value="" disabled>Color</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Green">green</option>
 
                    </select>
-                   <select name="Color" id="">
-                    <option value="" disabled selected>Size</option>
-                    <option value="">XS</option>
-                    <option value="">S</option>
-                    <option value="">M</option>
-                    <option value="">L</option>
-                    <option value="">XL</option>
+                   <select name="Size" id="" onChange={handleFilters}>
+                    <option value="" disabled>Size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
 
                    </select>
               </div>
               <div className="filter">
                   <div className="filterText">Sort Products:</div>
-                  <select name="" id="">
-                      <option value="" selected>Newest</option>
-                      <option value="">Price (asc)</option>
-                      <option value="">Price (desc)</option>
+                  <select name="" id="" onChange={e=>setSort(e.target.value)}>
+                      <option value="newest" >Newest</option>
+                      <option value="asc">Price (asc)</option>
+                      <option value="desc">Price (desc)</option>
                   </select>
               </div>
             </div>
@@ -202,27 +217,10 @@ const ProductList = () => {
             <h2>₦ 2,000</h2>
           </div>
           
-            </div>
+            </div> */}
         </div>
-        
-        {/* import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 
-export default function PaginationControlled() {
-  const [page, setPage] = React.useState(1);
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
-
-  return (
-    <Stack spacing={2}>
-      <Typography>Page: {page}</Typography>
-      <Pagination count={10} page={page} onChange={handleChange} />
-    </Stack>
-  );
-} */}
+               <FeaturedCategories path={path} filter={filters} sort={sort}/>
 
                 <Newsletter/>
                 <Footer/>
