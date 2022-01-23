@@ -75,7 +75,7 @@ const Hotdeals = () =>{
     };
     return (
       <div className="hot-container">
-        <h1>Best <span style={{color:"orangered"}}>Sellers</span></h1>
+        <h1>Hot <span style={{color:"orangered"}}>Deals</span></h1>
         <Slider {...settings}>
 
           <div>

@@ -4,31 +4,31 @@ import { FavoriteBorder, SearchOutlined, ShoppingCartOutlined, StarRate, StarBor
 
 export const CategoryMenus = [
 {
-Name:"Men Fashion",
+title:"Men Fashion",
  Menus:[
 
   {id:1,
-  title:'clothing',
-  path:'/products/men-clothing'
+  cat:'clothing',
+  path:''
   },
 
   {id:2,
-  title:'shoes',
-  path:'/products/men-shoes'
+  cat:'shoes',
+  path:''
   },
 
   {
-    title:'Bags & Wallets',
-    path:'/shoes'
+    cat:'Bags & Wallets',
+    path:'shoes'
     }, 
 
     {
-    title:'Watches',
+    cat:'Watches',
     path:'/shoes'
     },
   
      {
-        title:'Sunglasses',
+        cat:'Sunglasses',
         path:'/shoes'
         },
 
@@ -36,32 +36,32 @@ Name:"Men Fashion",
 
       },
 
-      {
-        Name:"Women Fashion",
+ {
+  title:"Women Fashion",
          Menus:[
         
           {
-          title:'clothing',
+          cat:'clothing',
           path:'/shoes'
           },
         
           {
-          title:'shoes',
+          cat:'shoes',
           path:'/shoes'
           },
         
           {
-            title:'Bags & Wallets',
+            cat:'Bags & Wallets',
             path:'/shoes'
             },
         
             {
-            title:'Watches',
+            cat:'Watches',
             path:'/shoes'
             },
           
              {
-                title:'Sunglasses',
+                cat:'Sunglasses',
                 path:'/shoes'
                 },
         
@@ -71,7 +71,7 @@ Name:"Men Fashion",
 ]
 
 
-export const FeatureProducttts = [
+export const ProductsData = [
   {
     id:1,
     title:"Air Jordan 87",

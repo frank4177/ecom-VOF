@@ -8,31 +8,41 @@ import Jewelry from './imagesCategories/jewelry.jpg'
 import sunglasses from  './imagesCategories/sunglasses.jpg'
 import textile from './imagesCategories/textile.jpg'
 import luggage from './imagesCategories/luggage.jpg'
-import './FeaturedCategories.css'
+import './Products.css'
 import womanShoe2 from './imagesWoman/womanShoe2.jpg'
 import { FavoriteBorder, SearchOutlined, ShoppingCartOutlined, StarRate, StarBorderRounded, StarRounded } from "@material-ui/icons";
-import {FeatureProducttts} from "./Data"
+import {ProductsData} from "./Data"
 import FeaturedProductsProp from "./ProductsProp";
 import axios from "axios";
+import ProductList from "./pages/productList";
 
-const FeaturedCategories = ({path, filters, sort}) => {
+const Products = ({cat, filters, sort}) => {
 
   const [products, setProducts] = useState([])
-  const [filteredProducts, setFilteredProducts] = useState([])
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(()=>{
     const getProducts = async () => {
       try{
-      const res = await axios.get("http://localhost:3000/api/products")
+      const res = await axios.get("http://localhost:2000/api/Products?category")
       console.log(res);
       }catch(err){}
     };
     getProducts()
-  }, [path]);
+  }, [cat]);
+
+  useEffect(()=>{
+    cat && setFilteredProducts(
+      products.filter(item=> 
+        Object.entries(filters).every(([key, value])=>
+      item[key].includes(value)
+      ))
+    )
+  },[products, cat, filters])
    
     return ( 
         <div className="featured-container">
-            <h1>Featured <span style={{color:"orangered"}}>Products</span></h1>
+            <h1><span style={{color:"orangered"}}>Products</span></h1>
             <div className="image-container">
 
           
@@ -117,7 +127,7 @@ const FeaturedCategories = ({path, filters, sort}) => {
             <h2>₦ 2,000</h2>
           </div> */}
 
-          {FeatureProducttts.map((item) => 
+          {filteredProducts.map((item) => 
           <FeaturedProductsProp item={item} key={item.id}/>
           
           )}
@@ -127,4 +137,4 @@ const FeaturedCategories = ({path, filters, sort}) => {
      );
 }
  
-export default FeaturedCategories;
+export default Products;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./FeaturedCategories.css"
+import "./Products.css"
 import {Link} from "react-router-dom"
 import { FavoriteBorder, SearchOutlined, ShoppingCartOutlined, StarRate, StarBorderRounded, StarRounded } from "@material-ui/icons";
 import womanShoe2 from './imagesWoman/womanShoe2.jpg'

@@ -97,10 +97,10 @@ return (
 {/* <>MOBILE VIEW</> */}
 
 <div className={CatNav ? 'nav-menu active' : 'nav-menu'}>
-    <ul className="nav-menu-items" onClick={showCatNav}>
+    <ul className="nav-menu-items">
         <li className="navbar-toggle">
             <div className="menu-barss">
-                <Close className="icon" />
+                <Close className="icon" onClick={showCatNav}/>
             </div>
         </li>
 
@@ -112,7 +112,7 @@ return (
         <li className="cat"><a href="">categories</a></li>
 
             {CategoryMenus.map((item, index) =>{
-              return <CategoryItems item={item} key={index}/>
+              return <CategoryItems item={item} key={index} />
             })}
     </ul>
     </ul>

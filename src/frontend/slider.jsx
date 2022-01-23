@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
-import './body.css'
+import './slider.css'
 import showcaseImageOne from '../frontend/showcasImageOne.jpg'
 import showcaseImageTwo from '../frontend/showcaseImageTwo.jpg'
 import showcaseImageFive from '../frontend/showcaseImageFive.jpg'

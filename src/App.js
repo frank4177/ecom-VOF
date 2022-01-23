@@ -7,8 +7,8 @@ import SignUp from './frontend/pages/signup';
 import Login from './frontend/pages/login'
 import Cart from './frontend/pages/cart';
 import Navbar from './frontend/navbar';
-import FeaturedCategories from './frontend/products';
-import { CategoryMenus, FeatureProducttts } from './frontend/Data';
+import Products from './frontend/products';
+import { CategoryMenus, ProductsData } from './frontend/Data';
 import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom'
 
 function App() {

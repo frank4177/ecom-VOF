@@ -14,12 +14,12 @@ const CategoryItems = ({item}) => {
 
     return ( 
         <div onClick={()=>showCatNav()} className="juza">
-            <div className="jj">{item.Name} <ArrowDropDown/></div>
+            <div className="jj">{item.title} <ArrowDropDown/></div>
             {CatNav && item.Menus.map((item, index)=>{
                 return (
 
-                        <Link to={item.path} item={item} key={index} className="kki"  onClick={showCatNav}>
-                            {item.title}
+                        <Link to={`products/${item.cat}`} item={item} key={index} className="kki"  onClick={showCatNav}>
+                            {item.cat}
                         </Link>
                     
                 );

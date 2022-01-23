@@ -6,11 +6,11 @@ import Footer from "../footer";
 import womanShoe2 from '../imagesWoman/womanShoe2.jpg'
 import { FavoriteBorder, SearchOutlined, ShoppingCartOutlined, StarRate, StarBorderRounded, StarRounded } from "@material-ui/icons";
 import { useLocation} from "react-router";
-import FeaturedCategories from "../products";
+import Products from "../products";
 
 const ProductList = () => {
   const location = useLocation();
-  const path = location.pathname.split("/")[2];
+  const cat = location.pathname.split("/")[2];
   const [filters, setFilters] = useState({})
   const [sort, setSort] = useState("newest")
 
@@ -27,7 +27,7 @@ const ProductList = () => {
             <Navbar/>
             {/* <h1 className="dresses">Dresses</h1> */}
             <div className="filterContainer">
-              {/* <div className="filter">
+              <div className="filter">
                   <div className="filterText">Filter Products:</div>
                    <select name="Color" id="" onChange={handleFilters}>
                     <option value="" disabled>Color</option>
@@ -50,7 +50,7 @@ const ProductList = () => {
               </div>
               <div className="filter">
                   <div className="filterText">Sort Products:</div>
-                  <select name="" id="" onChange={e=>setSort(e.target.value)}>
+                  <select name="" id="" onChange={(e) => setSort(e.target.value)}>
                       <option value="newest" >Newest</option>
                       <option value="asc">Price (asc)</option>
                       <option value="desc">Price (desc)</option>
@@ -61,7 +61,7 @@ const ProductList = () => {
 
 
                 
-            <div className="ProductFeatured-container">
+            {/* <div className="ProductFeatured-container">
             <h1>Women <span style={{color:"orangered"}}>Shoes</span></h1>
             <div className="ProductImage-container">
 
@@ -217,10 +217,10 @@ const ProductList = () => {
             <h2>₦ 2,000</h2>
           </div>
           
-            </div> */}
-        </div>
+            </div>
+        </div> */}
 
-               <FeaturedCategories path={path} filter={filters} sort={sort}/>
+               <Products cat={cat} filters={filters} sort={sort}/>
 
                 <Newsletter/>
                 <Footer/>

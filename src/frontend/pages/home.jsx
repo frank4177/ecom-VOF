@@ -4,7 +4,7 @@ import SimpleSlider from '../slider'
 import Hotdeals from '../hotdealsSlider'
 import Newsletter from '../newsletter'
 import Footer from '../footer'
-import FeaturedCategories from '../products'
+import Products from '../products'
 
 const Home = () => {
     return (
@@ -12,7 +12,7 @@ const Home = () => {
        {/* <Navbar/> */}
        <SimpleSlider/>
        <Hotdeals/>
-       <FeaturedCategories/>
+       <Products/>
        <Newsletter/>
        <Footer/>
       </div>
